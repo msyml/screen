@@ -41,15 +41,20 @@ export default {
       type: String,
       default: "100px",
     },
+    // map: {
+    //   type: Boolean,
+    //   default: false,
+    // },
+    // mapJson: {
+    //   type: String,
+    //   default: ""
+    // }
   },
   setup() {
     const { proxy } = getCurrentInstance();
     let echartsInstance = {};
     const state = reactive({});
     onMounted(() => {
-      console.log(proxy);
-      console.log(proxy.$props);
-      console.log(proxy.$props.options);
       init();
     });
     onBeforeUnmount(() => {});
@@ -57,11 +62,13 @@ export default {
       echartsInstance.dispose();
     });
     const init = () => {
-      console.log(proxy.$refs.ele);
       echartsInstance = echarts.init(
         proxy.$refs.ele as HTMLDivElement,
         proxy.$props.theme
       );
+      // if (proxy.$props.map) {
+      //   echartsInstance.registerMap("WenZhou", proxy.$props.mapJson,{})
+      // }
       echartsInstance.setOption(proxy.$props.options);
     };
     return {

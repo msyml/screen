@@ -16,6 +16,13 @@ const router = createRouter({
             meta: {
                 title: "抹上一抹凉 - 生产"
             }
+        },
+        {
+            path: "/map",
+            component: () => import('views/map/map.vue'),
+            meta: {
+                title: "抹上一抹凉 - 地图"
+            }
         }
     ]
 })

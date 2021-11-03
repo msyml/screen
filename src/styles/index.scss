@@ -1,1 +1,20 @@
-@import "./variables.scss";
+@import './variables.scss';
+
+.item {
+  background: linear-gradient(to left, $cornerColor, $cornerColor) left top no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) left top no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) right top no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) right top no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) left bottom no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) left bottom no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) right bottom no-repeat, linear-gradient(to left, $cornerColor, $cornerColor) right bottom no-repeat;
+  // 设置背景图片大小，第一个值宽度，第二个值高度，可以设置多重
+  background-size: $borderWidth $borderLength, $borderLength $borderWidth, $borderWidth $borderLength, $borderLength $borderWidth;
+  border: 1px solid #073f97;
+  position: relative;
+  padding: 4px;
+}
+.item:hover {
+  background: linear-gradient(to left, $cornerColor, $cornerColor) left top no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) left top no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) right top no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) right top no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) left bottom no-repeat, linear-gradient(to bottom, $cornerColor, $cornerColor) left bottom no-repeat,
+    linear-gradient(to left, $cornerColor, $cornerColor) right bottom no-repeat, linear-gradient(to left, $cornerColor, $cornerColor) right bottom no-repeat;
+  background-size: $borderWidth $borderLength, $borderLength $borderWidth, $borderWidth $borderLength, $borderLength $borderWidth;
+}

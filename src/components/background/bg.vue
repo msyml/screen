@@ -5,7 +5,7 @@
       <p class="name">{{title}}</p>
       <p class="time">{{ time }}</p>
     </div>
-    <canvas id="line" ref="line" width="1920" height="100"></canvas>
+    <canvas id="line" ref="line" width="1920" height="50"></canvas>
     <slot></slot>
   </div>
 </template>
@@ -127,9 +127,9 @@ export default {
       text-align: left;
     }
     .name {
-      font-size: 48px;
+      font-size: 56px;
       flex: 2;
-      padding-top: 24px;
+      padding-top: 16px;
       background-image: linear-gradient(#f0f0f1, #4d8ff0);
     }
     p {
